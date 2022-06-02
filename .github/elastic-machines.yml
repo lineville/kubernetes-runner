@@ -1,4 +1,4 @@
-- provider: kubernetes
+- provider: kubernetes@v0
   labels: [elastic]
   with:
     namespace: elastic-machines
