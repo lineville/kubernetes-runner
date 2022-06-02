@@ -1,4 +1,4 @@
-- provider: kubernetes@v0
+- provider: kubernetes-pod@v0
   labels: [elastic]
   with:
     namespace: elastic-machines
