@@ -7,3 +7,13 @@
   scale:
     - minimumMachines: 1
     - maximumMachines: 4
+
+- provider: kubernetes-pod@v0
+  labels: [elastic]
+  with:
+    namespace: elastic-machines-multi-1
+    containerImage: servercore:ltsc2019
+    os: windows
+  scale:
+    - minimumMachines: 1
+    - maximumMachines: 4
