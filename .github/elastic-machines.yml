@@ -1,5 +1,5 @@
 - provider: kubernetes-pod@v0
-  labels: [elastic]
+  labels: [elastic, elastic-machines-multi-1]
   with:
     namespace: elastic-machines-multi-1
     containerImage: ubuntu:focal
@@ -9,7 +9,7 @@
     - maximumMachines: 4
 
 - provider: kubernetes-pod@v0
-  labels: [elastic]
+  labels: [elastic, elastic-machines-multi-2]
   with:
     namespace: elastic-machines-multi-2
     containerImage: ubuntu:focal
