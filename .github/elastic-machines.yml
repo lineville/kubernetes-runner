@@ -11,7 +11,7 @@
 - provider: kubernetes-pod@v0
   labels: [elastic]
   with:
-    namespace: elastic-machines
+    namespace: elastic-machines-2
     containerImage: ubuntu:focal
     os: linux
   scale:
