@@ -12,8 +12,8 @@
   labels: [elastic]
   with:
     namespace: elastic-machines
-    containerImage: servercore:ltsc2019
-    os: windows
+    containerImage: ubuntu:focal
+    os: linux
   scale:
     - minimumMachines: 1
     - maximumMachines: 4
