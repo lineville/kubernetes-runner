@@ -11,7 +11,7 @@
 - provider: kubernetes-pod@v0
   labels: [elastic]
   with:
-    namespace: elastic-machines-multi-1
+    namespace: elastic-machines
     containerImage: servercore:ltsc2019
     os: windows
   scale:
