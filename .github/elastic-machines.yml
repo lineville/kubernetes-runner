@@ -1,5 +1,5 @@
 - provider: kubernetes-pod@v0
-  labels: [elastic, elastic-machines-multi-1]
+  labels: [elastic]
   with:
     context: lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io
     namespace: elastic-machines-multi-1
@@ -10,7 +10,7 @@
     - maximumMachines: 4
 
 - provider: kubernetes-pod@v0
-  labels: [elastic, elastic-machines-multi-2]
+  labels: [elastic]
   with:
     context: lineville@em-integration-testing.us-west-2.eksctl.io
     namespace: elastic-machines-multi-2
