@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build_1:
     # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, aks ]
+    runs-on: [ self-hosted, elastic, lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -34,7 +34,7 @@ jobs:
   # This workflow contains a single job called "build"
   build_2:
     # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, eks ]
+    runs-on: [ self-hosted, elastic, lineville@em-integration-testing.us-west-2.eksctl.io ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
