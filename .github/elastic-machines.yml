@@ -1,6 +1,7 @@
 - provider: kubernetes-pod@v0
   labels: [elastic, elastic-machines-multi-1]
   with:
+    context: lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io
     namespace: elastic-machines-multi-1
     containerImage: ubuntu:focal
     os: linux
@@ -11,6 +12,7 @@
 - provider: kubernetes-pod@v0
   labels: [elastic, elastic-machines-multi-2]
   with:
+    context: lineville@em-integration-testing.us-west-2.eksctl.io
     namespace: elastic-machines-multi-2
     containerImage: ubuntu:focal
     os: linux
