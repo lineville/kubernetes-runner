@@ -5,9 +5,6 @@
     namespace: elastic-machines-eks-namespace
     containerImage: ubuntu:focal
     os: linux
-  scale:
-    - minimumMachines: 1
-    - maximumMachines: 2
 
 - provider: kubernetes-pod@v0
   labels: [ elastic ]
@@ -16,9 +13,6 @@
     namespace: elastic-machines-aks-namespace
     containerImage: ubuntu:focal
     os: linux
-  scale:
-    - minimumMachines: 1
-    - maximumMachines: 2
 
 - provider: kubernetes-pod@v0
   labels: [ elastic ]
@@ -27,6 +21,3 @@
     namespace: default
     containerImage: ubuntu:focal
     os: linux
-  scale:
-    - minimumMachines: 1
-    - maximumMachines: 2
