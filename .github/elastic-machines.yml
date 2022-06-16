@@ -1,5 +1,5 @@
 - provider: kubernetes-pod@v0
-  labels: [ elastic ]
+  labels: [ elastic, lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io ]
   with:
     context: lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io
     namespace: elastic-machines-eks-namespace
@@ -7,7 +7,7 @@
     os: linux
 
 - provider: kubernetes-pod@v0
-  labels: [ elastic ]
+  labels: [ elastic, ci-cd-default-elastic-machines-dev-cluster ]
   with:
     context: ci-cd-default-elastic-machines-dev-cluster
     namespace: elastic-machines-aks-namespace
