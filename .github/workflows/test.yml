@@ -28,7 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo Hello, from cluster 1!
+          echo Hello, from cluster lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io!
+          sleep 10
           echo Bye!
   # This workflow contains a single job called "build"
   second_build:
@@ -43,7 +44,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo Hello, from cluster 2!
+          echo Hello, from cluster lineville@em-integration-testing.us-west-2.eksctl.io!
+          sleep 10
           echo Bye!
           
   third_build:
@@ -58,5 +60,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          echo Hello, from cluster 3!
+          echo Hello, from cluster ci-cd-default-elastic-machines-dev-cluster!
+          sleep 10
           echo Bye!
