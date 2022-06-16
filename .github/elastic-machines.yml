@@ -7,7 +7,7 @@
     os: linux
   scale:
     - minimumMachines: 1
-    - maximumMachines: 4
+    - maximumMachines: 2
 
 - provider: kubernetes-pod@v0
   labels: [ elastic, lineville@em-integration-testing.us-west-2.eksctl.io ]
@@ -18,7 +18,7 @@
     os: linux
   scale:
     - minimumMachines: 1
-    - maximumMachines: 4
+    - maximumMachines: 2
 
 - provider: kubernetes-pod@v0
   labels: [ elastic, ci-cd-default-elastic-machines-dev-cluster ]
@@ -29,4 +29,4 @@
     os: linux
   scale:
     - minimumMachines: 1
-    - maximumMachines: 4
+    - maximumMachines: 2
