@@ -29,7 +29,7 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, from cluster lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io!
-          sleep 10
+          sleep 30
           echo Bye!
   # This workflow contains a single job called "build"
   aks_build:
@@ -45,7 +45,7 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, from cluster ci-cd-default-elastic-machines-dev-cluster!
-          sleep 10
+          sleep 30
           echo Bye!
           
   default_build:
@@ -61,5 +61,5 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, from any cluster!
-          sleep 10
+          sleep 30
           echo Bye!
