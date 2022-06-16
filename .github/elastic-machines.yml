@@ -24,7 +24,7 @@
   labels: [ elastic ]
   with:
     context: lineville@em-integration-testing.us-west-2.eksctl.io
-    namespace: elastic-machines-multi-2
+    namespace: default
     containerImage: ubuntu:focal
     os: linux
   scale:
