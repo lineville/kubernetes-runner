@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  first_build:
+  eks_job:
     # The type of runner that the job will run on
     runs-on: [ self-hosted, elastic, lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io ]
 
@@ -32,23 +32,7 @@ jobs:
           sleep 10
           echo Bye!
   # This workflow contains a single job called "build"
-  second_build:
-    # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, lineville@em-integration-testing.us-west-2.eksctl.io ]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          echo Hello, from cluster lineville@em-integration-testing.us-west-2.eksctl.io!
-          sleep 10
-          echo Bye!
-          
-  third_build:
+  aks_build:
     # The type of runner that the job will run on
     runs-on: [ self-hosted, elastic, ci-cd-default-elastic-machines-dev-cluster ]
 
@@ -61,5 +45,21 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, from cluster ci-cd-default-elastic-machines-dev-cluster!
+          sleep 10
+          echo Bye!
+          
+  default_build:
+    # The type of runner that the job will run on
+    runs-on: [ self-hosted, elastic ]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: |
+          echo Hello, from any cluster!
           sleep 10
           echo Bye!

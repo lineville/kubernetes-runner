@@ -1,8 +1,8 @@
 - provider: kubernetes-pod@v0
-  labels: [ elastic, lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io ]
+  labels: [ elastic ]
   with:
     context: lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io
-    namespace: elastic-machines-multi-1
+    namespace: elastic-machines-eks-namespace
     containerImage: ubuntu:focal
     os: linux
   scale:
@@ -10,21 +10,21 @@
     - maximumMachines: 2
 
 - provider: kubernetes-pod@v0
-  labels: [ elastic, lineville@em-integration-testing.us-west-2.eksctl.io ]
+  labels: [ elastic ]
+  with:
+    context: ci-cd-default-elastic-machines-dev-cluster
+    namespace: elastic-machines-aks-namespace
+    containerImage: ubuntu:focal
+    os: linux
+  scale:
+    - minimumMachines: 1
+    - maximumMachines: 2
+
+- provider: kubernetes-pod@v0
+  labels: [ elastic ]
   with:
     context: lineville@em-integration-testing.us-west-2.eksctl.io
     namespace: elastic-machines-multi-2
-    containerImage: ubuntu:focal
-    os: linux
-  scale:
-    - minimumMachines: 1
-    - maximumMachines: 2
-
-- provider: kubernetes-pod@v0
-  labels: [ elastic, ci-cd-default-elastic-machines-dev-cluster ]
-  with:
-    context: ci-cd-default-elastic-machines-dev-cluster
-    namespace: elastic-machines-multi-3
     containerImage: ubuntu:focal
     os: linux
   scale:
