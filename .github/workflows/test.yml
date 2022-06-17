@@ -48,9 +48,9 @@ jobs:
           sleep 30
           echo Bye!
           
-  default_build:
+  eks_second:
     # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, eks ]
+    runs-on: [ self-hosted, elastic, eks2 ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

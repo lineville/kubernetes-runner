@@ -5,7 +5,9 @@
     namespace: elastic-machines-eks-namespace
     containerImage: ubuntu:focal
     os: linux
-
+    scale:
+      minimumIdleMachines: 2
+      
 - provider: kubernetes-pod@v0
   labels: [ elastic, aks ]
   with:
@@ -13,11 +15,15 @@
     namespace: elastic-machines-aks-namespace
     containerImage: ubuntu:focal
     os: linux
+    scale:
+      minimumIdleMachines: 2
 
 - provider: kubernetes-pod@v0
-  labels: [ elastic, eks ]
+  labels: [ elastic, eks2 ]
   with:
     context: lineville@em-integration-testing.us-west-2.eksctl.io
     namespace: default
     containerImage: ubuntu:focal
     os: linux
+    scale:
+      minimumIdleMachines: 2
