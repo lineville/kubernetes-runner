@@ -16,9 +16,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  eks_job:
+  vm_job:
     # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, eks ]
+    runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -29,37 +29,5 @@ jobs:
       - name: Run a one-line script
         run: |
           echo Hello, from eks cluster!
-          sleep 30
-          echo Bye!
-  # This workflow contains a single job called "build"
-  aks_build:
-    # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, aks ]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          echo Hello, from aks cluster!
-          sleep 30
-          echo Bye!
-          
-  eks_second:
-    # The type of runner that the job will run on
-    runs-on: [ self-hosted, elastic, eks2 ]
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          echo Hello, from another eks cluster!
           sleep 30
           echo Bye!
