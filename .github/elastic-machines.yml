@@ -1,32 +1,7 @@
-- provider: kubernetes-pod@v0
-  labels: [ elastic, eks ]
-  ephemeral: false
+- provider: azure-virtual-machine@v0
   with:
-    context: lineville@elastic-machines-multi-cluster.us-west-2.eksctl.io
-    namespace: elastic-machines-eks-namespace
-    containerImage: ubuntu:focal
-    os: linux
-    scale:
-      minimumIdleMachines: 2
-      
-- provider: kubernetes-pod@v0
-  labels: [ elastic, aks ]
-  ephemeral: false
-  with:
-    context: ci-cd-default-elastic-machines-dev-cluster
-    namespace: elastic-machines-aks-namespace
-    containerImage: ubuntu:focal
-    os: linux
-    scale:
-      minimumIdleMachines: 2
-
-- provider: kubernetes-pod@v0
-  labels: [ elastic, eks2 ]
-  ephemeral: false
-  with:
-    context: lineville@em-integration-testing.us-west-2.eksctl.io
-    namespace: default
-    containerImage: ubuntu:focal
-    os: linux
-    scale:
-      minimumIdleMachines: 2
+    subscription: 685eed17-13cd-4ade-96cd-28ed2e0c4d53
+    resourceGroup: elastic-machines-live
+    location: westus3
+    image: Canonical:UbuntuServer:18.04-LTS:latest
+    vmSku: Standard_DS1_v2
